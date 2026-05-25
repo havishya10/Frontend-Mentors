@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | 3-Column Preview Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts for the documentation page -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Documentation Theme */
+            --doc-bg: #fdfbf7; /* Slightly creamier background like reference */
+            --doc-text-main: #2b2b2b;
+            --doc-text-muted: #666;
+            --doc-accent: #00403f; /* Dark Green */
+            --doc-code-bg: #1e1e1e;
+
+            /* Project Colors for display */
+            --color-sedans: hsl(31, 77%, 52%);
+            --color-suvs: hsl(184, 100%, 22%);
+            --color-luxury: hsl(179, 100%, 13%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--doc-bg);
+            color: var(--doc-text-main);
+            line-height: 1.6;
+            padding-bottom: 4rem;
+        }
+
+        /* --- Header --- */
+        header {
+            background: #fff;
+            padding: 4rem 1.5rem;
+            border-bottom: 1px solid #eaeaea;
+            text-align: center;
+            position: relative;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            text-decoration: none;
+            color: var(--doc-text-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--doc-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--doc-text-muted);
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .author-tag {
+            color: var(--doc-accent);
+            font-weight: 700;
+        }
+
+        /* --- Main Content --- */
+        .container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section { margin-bottom: 4rem; }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #111;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Underline effect for H2 */
+        h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: var(--color-sedans); /* Using project color */
+            margin-top: 10px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        p { margin-bottom: 1.2rem; color: #555; font-size: 1.05rem; }
+
+        /* --- Color Swatches --- */
+        .swatch-grid {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .swatch-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .label { font-size: 0.9rem; color: #444; font-weight: 600; }
+
+        /* --- Code Blocks --- */
+        .code-window {
+            background: var(--doc-code-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            border-left: 5px solid var(--color-suvs);
+        }
+
+        pre {
+            font-family: 'Consolas', monospace;
+            font-size: 0.9rem;
+            color: #d4d4d4;
+            line-height: 1.5;
+        }
+
+        .c-sel { color: #d7ba7d; }
+        .c-prop { color: #9cdcfe; }
+        .c-val { color: #ce9178; }
+        .c-com { color: #6a9955; font-style: italic; }
+
+        /* --- Insight Box --- */
+        .insight-box {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .insight-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--doc-accent);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 5rem;
+            border-top: 1px solid #eee;
+            padding-top: 2rem;
+        }
+
+        @media(max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .back-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="#" class="back-btn">← Back</a>
+    <h1> 3-Column Preview Card Component </h1>
+    <div class="subtitle">Documentation & Technical Breakdown | <span class="author-tag">Coded by Havishya Vally</span></div>
+</header>
+
+<div class="container">
+
+    <!-- OVERVIEW -->
+    <section>
+        <h2>Project Overview</h2>
+        <p>
+            This project is a solution to the <strong>3-Column Preview Card Component</strong> challenge.
+            The objective was to create a responsive card layout that adapts seamlessly from a vertical stack on mobile devices to a horizontal row on larger screens, while maintaining strict visual fidelity to the design mockups.
+        </p>
+    </section>
+
+    <!-- LAYOUT STRATEGY (UPDATED) -->
+    <section>
+        <h2>Layout Strategy</h2>
+
+        <h3>1. The Body Grid & Footer technique</h3>
+        <p>
+            Instead of using absolute positioning for the footer or complex flex calculations, I utilized a <strong>CSS Grid on the body</strong>.
+            I defined a specific <code>grid-template-rows</code> structure: <code>1fr</code> for the main content and <code>30px</code> specifically reserved for the footer.
+        </p>
+        <p>
+            Combined with <code>place-content: center</code> and <code>place-items: center</code>, this ensures the card stays perfectly centered in the viewport, while the footer naturally sits at the bottom without overlapping.
+        </p>
+
+        <div class="code-window">
+<pre>
+<span class="c-sel">body</span> {
+    <span class="c-prop">background-color</span>: <span class="c-val">var(--page-bg)</span>;
+    <span class="c-prop">min-height</span>: <span class="c-val">100vh</span>;
+
+    <span class="c-com">/* Layout Engine */</span>
+    <span class="c-prop">display</span>: <span class="c-val">grid</span>;
+
+    <span class="c-com">/* 1fr for main content, 30px specific for footer */</span>
+    <span class="c-prop">grid-template-rows</span>: <span class="c-val">1fr 30px</span>;
+
+    <span class="c-com">/* Perfect Center Alignment */</span>
+    <span class="c-prop">place-content</span>: <span class="c-val">center</span>;
+    <span class="c-prop">place-items</span>: <span class="c-val">center</span>;
+}
+</pre>
+        </div>
+
+        <h3>2. Responsive Container Logic</h3>
+        <p>
+            The <code>.card-container</code> uses a <strong>Mobile-First</strong> approach. It defaults to a single column stack.
+            I identified <code>605px</code> as the ideal breakpoint where the content has enough room to expand horizontally. At this point, the grid switches to 3 equal columns.
+        </p>
+
+        <div class="code-window">
+<pre>
+<span class="c-sel">.card-container</span> {
+    <span class="c-prop">display</span>: <span class="c-val">grid</span>;
+    <span class="c-prop">grid-template-columns</span>: <span class="c-val">1fr</span>;
+
+    <span class="c-com">/* CSS Nesting for Breakpoint */</span>
+    <span class="c-sel">@media (min-width: 605px)</span> {
+        <span class="c-prop">grid-template-columns</span>: <span class="c-val">repeat(3, 1fr)</span>;
+    }
+}
+</pre>
+        </div>
+    </section>
+
+    <!-- COMPONENT LOGIC -->
+    <section>
+        <h2>Component Logic</h2>
+
+        <div class="insight-box">
+            <span class="insight-title">The "Flex-Margin" Alignment Trick</span>
+            <p>
+                A common issue in card designs is that varying paragraph lengths cause the "Learn More" buttons to become misaligned.
+            </p>
+            <p>
+                <strong>My Solution:</strong> I applied <code>display: flex</code> and <code>flex-direction: column</code> to the individual card elements. By setting <code>margin-top: auto</code> on the button, it consumes all available vertical space <em>above</em> itself, forcing the button to the bottom of the container.
+            </p>
+        </div>
+
+        <div class="code-window">
+<pre>
+<span class="c-sel">button</span> {
+    <span class="c-prop">margin-top</span>: <span class="c-val">auto</span>; <span class="c-com">/* Pushes button to bottom */</span>
+    <span class="c-prop">padding</span>: <span class="c-val">.5em 2em</span>;
+    <span class="c-prop">width</span>: <span class="c-val">fit-content</span>;
+    <span class="c-prop">border</span>: <span class="c-val">2px solid white</span>;
+}
+</pre>
+        </div>
+    </section>
+
+    <!-- VISUAL IDENTITY -->
+    <section>
+        <h2>Visual Identity</h2>
+        <p>The design relies on a strict color palette defined in CSS variables, ensuring maintainability.</p>
+
+        <div class="swatch-grid">
+            <div class="swatch-item">
+                <div class="circle" style="background: var(--color-sedans);"></div>
+                <span class="label">Sedans (Orange)</span>
+            </div>
+            <div class="swatch-item">
+                <div class="circle" style="background: var(--color-suvs);"></div>
+                <span class="label">SUVs (Cyan)</span>
+            </div>
+            <div class="swatch-item">
+                <div class="circle" style="background: var(--color-luxury);"></div>
+                <span class="label">Luxury (Dark Green)</span>
+            </div>
+        </div>
+
+        <h3>Typography Details</h3>
+        <p>
+            I customized the typography to ensure hierarchy. The headings use <strong>Big Shoulders Text (700)</strong>, while the body text uses <strong>Lexend Deca (400)</strong> with a <code>line-height</code> of <code>1.8</code> for better readability compared to the default.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Havishya Vally </p>
+    </footer>
+
+</div>
+
+</body>
+</html>
