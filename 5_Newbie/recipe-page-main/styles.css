@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+* {
+
+    font-style: normal;
+
+    
+}
+body {
+    background-color: hsl(30, 54%, 90%);
+    width: 100%;
+    /*max-width: 600px;*/
+}
+main {
+    max-width: 600px;
+    border-radius: 10px ;
+    background-color: white;
+    padding: 1.5em;
+}
+
+
+
+p , li , td{
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(30, 10%, 34%) !important;
+}
+
+
+h1 {
+    font-weight: 600;
+    font-family: "Young Serif", serif;
+
+}
+h2 {
+    font-family: "Young Serif", serif;
+    color: hsl(14, 45%, 36%);
+}
+b {
+    font-weight: 700;
+    color: hsl(30, 10%, 34%);
+}
+hr {
+
+    color:  hsl(30, 10%, 34%);
+}
+li {
+    padding: 0.5em 1.5em;
+}
+img , .prep {
+    border-radius: 10px;
+}
+
+.prep {
+    background-color: hsl(330, 100%, 98%);
+    padding: 1em;
+}
+.prep h5 {
+    color: hsl(332, 51%, 32%);
+}
+.prep li::marker {
+    color: hsl(332, 51%, 32%);
+}
+li::marker {
+    font-weight: 600;
+    color: hsl(14, 45%, 36%);
+}
+tr b  {
+    color: hsl(14, 45%, 36%);
+}
+.attribution {
+    color: hsl(24, 5%, 18%);
+}
+.attribution a {
+    color: hsl(332, 51%, 32%);
+}

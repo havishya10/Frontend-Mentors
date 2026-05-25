@@ -1,0 +1,129 @@
+:root {
+    /* Colors */
+    --blue-600: hsl(185, 75%, 39%);
+    --navy-950: hsl(229, 23%, 23%);
+    --gray-500: hsl(227, 10%, 46%);
+    --gray-100: hsl(225, 10%, 92%);
+
+    /* Typography */
+    --ff-base: 'Kumbh Sans', sans-serif;
+    --fs-base: 18px;
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-base);
+}
+h1 , h2 {
+    color: var(--navy-950);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-bold);
+}
+h1 span {
+    color: var(--gray-500);
+    font-weight: var(--fw-regular);
+}
+p {
+    font-size: .9rem;
+    line-height: 1.6;
+    color: var(--gray-500);
+}
+body {
+    padding: 1em;
+    min-height: 100vh;
+    background-color: var(--blue-600);
+
+    background-image:
+            url("images/bg-pattern-top.svg"),
+            url("images/bg-pattern-bottom.svg");
+
+    background-repeat: no-repeat, no-repeat;
+
+    background-size:
+            contain,
+            contain;
+
+    background-position:
+            -20vw -20vw,
+            50vw 60vh;
+}
+
+main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.profile-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: var(--gray-100);
+}
+.profile-card-pattern img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+
+}
+.profile-card-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.profile-avatar img {
+    margin-top: -3em;
+    border-radius: 50%;
+    border: 5px solid var(--gray-100);
+}
+.profile-info {
+    text-align: center;
+    padding: 1em;
+}
+.profile-info h1 {
+    display: flex;
+    gap: .5em;
+}
+.profile-info p {
+    margin-top: .5em;
+}
+.profile-card-stats {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em;
+    border-top-color: lightgray;
+    border-top-style: solid;
+    border-top-width: 1px ;
+}
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2em;
+}
+.stat p {
+    letter-spacing: 2px;
+    font-size: .6rem;
+}
+footer {
+    text-align: center;
+    margin-top: .5em;
+}
+footer p {
+    color: var(--gray-100);
+    font-size: .6rem;
+}
+footer p a {
+    color: var(--gray-100);
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+}
+footer p a:hover {
+    color: var(--navy-950);
+
+}

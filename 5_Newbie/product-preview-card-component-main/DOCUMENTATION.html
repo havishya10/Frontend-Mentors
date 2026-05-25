@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | Product Preview Card Component</title>
+    <!-- Same fonts used in the project -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --green-500: hsl(158, 36%, 37%);
+            --green-700: hsl(158, 42%, 18%);
+            --black: hsl(212, 21%, 14%);
+            --grey: hsl(228, 12%, 48%);
+            --cream: hsl(30, 38%, 92%);
+            --white: hsl(0, 0%, 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cream);
+            color: var(--black);
+            line-height: 1.6;
+            padding: 1em;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 1em;
+            border-radius: 10px;
+
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 2px solid var(--cream);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Fraunces', serif;
+            color: var(--green-500);
+            font-size: 2.3rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+
+        }
+
+        h2 {
+            font-family: 'Fraunces', serif;
+            color: var(--black);
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        p {
+            color: var(--grey);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+
+        }
+        a {
+
+            color: var(--grey);
+            display: inline-block;
+            /*margin: 1em .4em;*/
+            margin-top: 1.5em;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            text-decoration: none;
+            position: absolute;
+
+        }
+        a:hover {
+            color: var(--black);
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: var(--green-500);
+            font-weight: 700;
+        }
+
+        code {
+            background: var(--cream);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: var(--green-700);
+        }
+
+        pre {
+            background: var(--black);
+            color: #eee;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            font-size: 0.85rem;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--grey);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .approach-box {
+            border-left: 5px solid var(--green-500);
+            padding: 1rem 1.5rem;
+            background: #f9fbf9;
+            margin: 2rem 0;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--grey);
+        }
+        .color-palette {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-swatch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .swatch {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <a href="index.html"><i class="fa-solid fa-arrow-left"></i>back</a>
+
+            <div style="text-align: center; ">
+                <h1>Project Documentation</h1>
+                <p>Product Preview Card Component | <span class="highlight">Developed by Havishya Vally</span></p>
+
+            </div>
+
+            </header>
+
+        <section>
+            <h2>My Approach</h2>
+            <p>This project was built with a <span class="highlight">Mobile-First</span> mindset. I focused on creating a clean, responsive card that adapts seamlessly from small screens to larger desktop views. The goal was to maintain high fidelity to the design while using modern, efficient CSS logic.</p>
+            
+            <div class="approach-box">
+                <p><strong>Design Philosophy:</strong> I utilized a semantic structure and a modular CSS approach. By defining a robust palette of variables, I ensured the project is easy to maintain and consistent with the brand colors provided in the style guide.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Color Palette & Typography</h2>
+            <p>I mapped out the colors into CSS variables for efficiency:</p>
+            <div class="color-palette">
+                <div class="color-swatch">
+                    <div class="swatch" style="background-color: var(--green-500);"></div>
+                    <code>Green 500</code>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch" style="background-color: var(--green-700);"></div>
+                    <code>Green 700</code>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch" style="background-color: var(--black);"></div>
+                    <code>Black</code>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch" style="background-color: var(--grey);"></div>
+                    <code>Grey</code>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch" style="background-color: var(--cream);"></div>
+                    <code>Cream</code>
+                </div>
+            </div>
+            <ul>
+                <li><strong>Primary:</strong> Green 500 (<code>hsl(158, 36%, 37%)</code>) and Green 700 for interaction.</li>
+                <li><strong>Neutral:</strong> Cream for the background, Black for headings, and Grey for body text.</li>
+                <li><strong>Fonts:</strong> I used <code>Fraunces</code> for that elegant serif heading feel and <code>Montserrat</code> for clean, readable body copy.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>The Technical Implementation</h2>
+            
+            <h3>1. Layout Strategy</h3>
+            <p>To center the component perfectly on the screen, I used CSS Grid on the body. This is a modern alternative to older centering methods:</p>
+            <pre>
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: var(--page-bg);
+}
+            </pre>
+
+            <h3>2. Component Logic</h3>
+            <p>The card is built using Flexbox. On mobile, the flex direction is set to <code>column</code>. For screens wider than <code>435px</code>, it shifts to <code>row</code>. I utilized <code>nth-child</code> selectors for quick, efficient styling of the text elements within the card content without bloating the HTML with excessive classes. Although its not recommended, I did it for quick styling just for the challenge, not in real world implementation.</p>
+
+            <h3>3. Modern Features</h3>
+            <p>I implemented <strong>CSS Nesting</strong> to keep my media queries organized. Instead of having a separate block at the end of the file, the responsive logic lives right inside the class it modifies:</p>
+            <pre>
+.card {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 435px) {
+        flex-direction: row;
+    }
+}
+            </pre>
+        </section>
+
+        <section>
+            <h2>Key Challenges & Solutions</h2>
+            <ul>
+                <li><strong>New Direction:</strong> I used the <code>&lt;picture&gt;</code> element to switch between the mobile and desktop images. This ensures the browser only loads the image size necessary for the user's device, optimizing performance.</li>
+                <li><strong>Spacing:</strong> By using <code>em</code> units for gaps and margins, the internal spacing of the card feels fluid and proportional to the text size.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Havishya Vally | Product Preview Card Documentation</p>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PING</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Qf0pETZyjJB5vHP9T1eVPIm4cMInZNL61OrpCGy9ySw9iR/MjXHG5k2yUFZB1p45CkMJMR0RgfYNPXRNFZwh7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Top Logo -->
+<header class="top-header">
+    <div class="container">
+        <h1 class="logo">PING.</h1>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>We are launching <span>soon!</span></h1>
+                <p>Subscribe and get notified</p>
+            </div>
+            <form class="form">
+                <div class="form-input">
+                <input
+                        type="email"
+                        id="email-input"
+                        placeholder="example@email.com"
+                        aria-describedby="email-error"
+                        required>
+                <p id="email-error" class="error-message" role="alert" aria-live="polite">
+                    Please provide a valid email address
+                </p>
+                </div>
+                <button type="submit" class="btn">Notify Me</button>
+            </form>
+        </div>
+        <figure class="mockup">
+            <img src="images/illustration-dashboard.png"
+                 alt="Ping dashboard preview showing analytics charts and Slack integration"
+                 width="800"
+                 height="500"
+                 loading="lazy">
+        </figure>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="social-links">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+    </div>
+    <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
+</footer>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+

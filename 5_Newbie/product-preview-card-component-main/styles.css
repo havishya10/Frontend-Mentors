@@ -1,0 +1,171 @@
+:root {
+    /* Palette */
+    --green-500: hsl(158, 36%, 37%);
+    --green-700: hsl(158, 42%, 18%);
+    --black: hsl(212, 21%, 14%);
+    --grey: hsl(228, 12%, 48%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Semantic */
+    --btn-bg: var(--green-500);
+    --btn-bg-hover: var(--green-700);
+    --text-heading: var(--black);
+    --text-body: var(--grey);
+    --page-bg: var(--cream);
+    --card-bg: var(--white);
+
+    /* Fonts */
+    --ff-accent: 'Fraunces', serif;
+    --ff-body: 'Montserrat', sans-serif;
+
+    /* typography */
+    --fs-body: .8rem;
+    --fs-heading: 1.8rem;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+p {
+    line-height: 1.6;
+    font-size: var( --fs-body);
+    color: var(--text-body);
+
+}
+a {
+    color: var(--black);
+    cursor: pointer;
+}
+a:hover {
+    color: var(--green-700);
+    font-weight: bold;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 30px 1fr 30px;
+    place-content: center;
+    place-items: center;
+    min-height: 100vh;
+    background-color: var(--page-bg);
+    width: 100%;
+    padding: 1.5rem;
+    gap: 1em;
+    font-family: var(--ff-body);
+
+}
+nav {
+    font-size: .6rem;
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+}
+nav:hover {
+    color: var(--green-700);
+}
+main {
+    max-width: 500px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow:  0 2px 8px rgba(0,0,0,0.08);
+    @media (min-width: 435px) {
+        flex-direction: row;
+    }
+}
+img {
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.card-image {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    flex-basis: 50%;
+    @media (min-width: 435px) {
+        border-radius: 10px 0 0 10px;
+    }
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: .85em;
+    margin: 2em 1.5em;
+    flex-basis: 50%;
+
+}
+/*used nth child for quick styling, not recommended for production use and i wont use it*/
+.card-content > *:nth-child(1) {
+    letter-spacing: 2.5px;
+}
+.card-content > *:nth-child(2) {
+    color: var(--text-heading);
+    font-size: var( --fs-heading);
+    font-weight: 700;
+    font-family: Fraunces, serif;
+}
+.card-content > *:nth-child(4) {
+    display: flex;
+    gap: .5em;
+    color: var(--green-500);
+    align-items: center;
+    font-weight: bold;
+    font-size: var( --fs-heading);
+}
+.card-content > *:nth-child(4) > span {
+    color: var(--text-body);
+    font-weight: 500;
+    text-decoration: line-through;
+    font-size: var( --fs-body);
+}
+button {
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--btn-bg);
+    color: var(--white);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: var( --fs-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+button:hover {
+    background-color: var(--btn-bg-hover);
+}
+footer p {
+    text-align: center;
+    color: var(--text-body);
+    font-size: .6rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
