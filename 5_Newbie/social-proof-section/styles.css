@@ -1,0 +1,189 @@
+:root {
+    /* Primary colors */
+    --clr-pr-very-dark-magenta: hsl(300, 43%, 22%);
+    --clr-pr-soft-pink: hsl(333, 80%, 67%);
+
+    /* Neutral colors */
+    --clr-ne-dark-grayish-magenta: hsl(303, 10%, 53%);
+    --clr-ne-light-grayish-magenta: hsl(300, 24%, 96%);
+    --clr-ne-white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    --fs-body: 15px;
+
+    --ff-base: "League Spartan", sans-serif;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-base);
+    text-wrap: pretty;
+}
+h1 {
+    font-size: clamp(2.65rem, 5vw, 3.5rem);
+    font-weight: var(--fw-bold);
+    color: var(--clr-pr-very-dark-magenta);
+}
+p {
+    line-height: 1.5;
+    font-size: var( --fs-body);
+    font-weight: var(--fw-medium);
+    color: var(--clr-ne-dark-grayish-magenta);
+}
+body {
+    padding: 3em 1.5em;
+    background-color: var(--clr-ne-white);
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    place-content: center;
+    min-height: 100vh;
+
+    @media (min-width: 580px) {
+        padding: 3em;
+        background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    }
+    @media (min-width: 760px) {
+        padding: 4em;
+    }
+}
+.social-proof-section {
+    display: grid;
+    grid-template-rows: repeat(auto-fill,1fr);
+    gap: 2em;
+    max-width: 1000px;
+}
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    place-content: space-between;
+    align-items: center;
+    gap: 2em;
+    @media (min-width: 580px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    @media (min-width: 580px) {
+        text-align: left;
+    }
+    @media (min-width: 900px) {
+        max-width: 90%;
+    }
+
+}
+header p {
+    font-size: 1rem;
+}
+.header-container ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+.header-container ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+   background-color: var(--clr-ne-light-grayish-magenta);
+    padding: .5em 1em;
+    border-radius: 5px;
+
+}
+@media (min-width: 990px) {
+    .header-container ul li {
+        width: 75%;
+    }
+    .header-container ul li:nth-child(2) {
+        margin-left: 3em;
+    }
+    .header-container ul li:nth-child(3) {
+        margin-left: 6em;
+    }
+
+}
+
+
+.header-container ul li p {
+    font-weight: var(--fw-bold);
+    color: var(--clr-pr-very-dark-magenta);
+}
+.star-rating {
+    display: flex;
+    gap: .5em;
+}
+.user-reviews-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    @media (min-width: 600px) and (max-width: 990px)    {
+        grid-template-rows: repeat(auto-fill,1fr);
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        .user-review-card:last-child {
+            grid-column: 1 / -1;
+        }
+    }
+    @media (min-width: 990px) {
+        margin-top: 2em;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+
+    }
+}
+
+.user-review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+    padding: 2em;
+    border-radius: 7px;
+    background-color: var(--clr-pr-very-dark-magenta);
+}
+@media (min-width: 990px) {
+    .user-review-card {
+        height: 235px;
+        max-width: 350px;
+
+    }
+    .user-review-card:nth-child(2) {
+        margin-top: 1em;
+    }
+    .user-review-card:nth-child(3) {
+        margin-top: 2em;
+    }
+}
+.user-review-card p {
+
+    color: var(--clr-ne-white);
+    font-weight: var(--fw-regular);
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.user-info img {
+    border-radius: 50%;
+    width: 35px;
+}
+.user-info div h4 {
+    color: var(--clr-ne-white);
+    font-weight: var(--fw-bold);
+}
+.user-info div p {
+    color: var(--clr-pr-soft-pink);
+}
